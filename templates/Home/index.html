@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %} Trang Chủ {% endblock %}
+
+<!-- {% load static %} -->
+
+{% block content %}
+<div class="container-fluid row">
+    <!-- Menu tính năng của app -->
+    <div class="content col-9 px-4">
+        <!-- Hàng 1 -->
+        <div class="row g-5">
+            <div class="col-4">
+                <div class="p-3 text-center">
+                    <h1>Điểm số</h1>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-3 text-center">
+                    <h1>Hạnh kiểm</h1>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-3 text-center">
+                    <h1>Biểu đồ</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Hàng 2 -->
+        <div class="row g-5" style="padding-top: 49px;">
+            <div class="col-4">
+                <div class="p-3 text-center">
+                    <h1>Phòng học</h1>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-3 text-center">
+                    <h1>Thông báo</h1>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-3 text-center">
+                    <h1>Học liệu<br>trực tuyến</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Aside chứa các thông tin -->
+    <div class="aside col-3">
+        <!-- Thông tin của trường học -->
+        <div class="information" id="school">
+            <h3 class="info-title">Thông tin của trường</h3>
+            <a href="http://127.0.0.1:8000/">
+                <p>
+                    Xem thêm<br><img src="{% static 'image\Home\aside\arrow-bar-down.svg' %}" alt="arrow-bar-down">
+                </p>
+            </a>
+        </div>
+        <hr>
+        <!-- Thông tin của bộ giáo dục -->
+        <div class="information" id="education">
+            <h3 class="info-title">Thông tin giáo dục</h3>
+            <a href="http://127.0.0.1:8000/">
+                <p>
+                    Xem thêm<br><img src="{% static 'image\Home\aside\arrow-bar-down.svg' %}" alt="arrow-bar-down">
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

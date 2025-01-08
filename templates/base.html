@@ -6,17 +6,37 @@
     <title>{% block title %}{% endblock %}</title>
 
     {% load static %}
-
+    
     <!-- BOOTSTRAP 5 -->
     <link rel="stylesheet" href="{% static 'css\bootstrap5\bootstrap.css' %}">
+
+    <!-- MAIN -->
+    <link rel="stylesheet" href="{% static 'css/main/style.css' %}">
+
 </head>
 <body>
+    <div class="header">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="" class="navbar-brand">
+                    <img src="{% static 'img\draft.png' %}" alt="" width="30px">
+                    KITE LMS
+                </a>
+                <nav class="nav">
+                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    <a class="nav-link" href="#">Phòng học</a>
+                    <a class="nav-link" href="#">Học lực</a>
+                    <a class="nav-link" href="#">Tài khoản</a>
+                </nav>
+            </div>
+        </nav>
+    </div>
     <!-- Nội dung trang web -->
     {% block content %}
     
     {% endblock %}
 
     <!-- BOOTSTRAP 5 -->
-    <script src="{% static 'static\js\bootstrap5\bootstrap.js' %}"></script>
+    <script src="{% static 'js\bootstrap5\bootstrap.js' %}"></script>
 </body>
 </html>
