@@ -1,3 +1,5 @@
+/* --------- HEADER ------------- */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -43,10 +45,20 @@ nav a.active {
     color: #fff;
 }
 
+.bg-light{
+    background-color: rgb(16, 16, 213) !important;
+}
+
 nav a:hover {
     background-color: #d3d3f7;
-    color: #4a4a8c;
+    color: #111141 !important;
 }
+
+.nav a{
+    color: rgb(255, 255, 255) !important;
+}
+
+/* --------- MAIN ----------- */
 
 main {
     display: flex;
@@ -71,6 +83,17 @@ main .card:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.section {
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 153px;
+    display: grid;
+    place-items: center;
+}
+
+.section:hover{
+    transform: scale(1.1);
+}
+
 aside {
     background-color: #e8f8f8;
     padding: 20px;
@@ -82,4 +105,23 @@ aside h2 {
     font-size: 18px;
     color: #4a4a8c;
     margin-bottom: 10px;
+}
+
+/* ----------- HOME -------------- */
+a.section-text, a.section-text:hover{
+    color: black;
+}
+
+/* ------------- Học lực -------------- */
+.small-nav{
+    width: 280px;
+    margin: 0 0 25px 35px;
+}
+.button-container, .button-container p{
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+}
+.bang-diem{
+    text-align: center;
 }
