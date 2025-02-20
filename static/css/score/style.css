@@ -1,0 +1,11 @@
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.hoc-luc{
+    padding: 25px 25px 0 25px !important;
+    border: 1px black solid;
+    margin: 25px 75px 0 75px;
+}

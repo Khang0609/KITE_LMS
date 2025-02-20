@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %} Trang Chủ {% endblock %}
+
+{% load static %}
+
+{% block content %}
+<div class="small-nav row">
+    <div class="col-4 text-center button-container">
+        <button class="btn btn-primary" onclick="showingType(1)"><p>Điểm số</p></button>
+    </div>
+    <div class="col-4 text-center button-container">
+        <button class="btn btn-primary" onclick="showingType(2)"><p>Hạnh kiểm</p></button>
+    </div>
+    <div class="col-4 text-center button-container">
+        <button class="btn btn-primary" onclick="showingType(3)"><p>Biểu đồ</p></button>
+    </div>
+</div>
+<div class="container">
+    <div class="mark-container" id="score" style="display: none;">
+        <h1>Điểm số</h1>
+        <table class="table table-bordered bang-diem">
+            <thead class="align-middle">
+                <tr>
+                    <th scope="col" rowspan="2">Môn học</th>
+                    <th scope="col" colspan="4">ĐGTX</th>
+                    <th scope="col">ĐGGK</th>
+                    <th scope="col" rowspan="2">ĐGCK</th>
+                    <th scope="col" rowspan="2">ĐTB</th>
+                </tr>
+                <tr>
+                    <th scope="col">TX1</th>
+                    <th scope="col">TX2</th>
+                    <th scope="col">TX3</th>
+                    <th scope="col">TX4</th>
+                    <th scope="col">1</th>
+                </tr>
+            </thead>
+            <tbody id="broad-body">
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="hanh-kiem-container" id="hanh-kiem" style="display: none;">
+        <h1>Hạnh kiểm</h1>
+        <div class="hoc-luc">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <img src="" alt="avatar">
+                    <h5>Tran Nguyen Khang</h5>
+                    <h5>12A16</h5>
+                </div>
+                <div class="col-8">
+                    <p><b>Điểm trung bình:</b> 9.5</p>
+                    <p><b>Học lực:</b> Giỏi</p>
+                    <p><b>Hạnh kiểm:</b> Tốt</p>
+                    <p><b>Hạng:</b> 3</p>
+                    <p><b>Nhận xét:</b> Học hơn dở nên hạng ba toàn khối thôi!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bieu-do-container" id="bieu-do" style="display: none;">
+        <h1>Biểu đồ</h1>
+    </div>
+</div>
+
+<script src="{% static 'js/Score/script.js' %}"></script>
+<script>
+    window.onload = function(){
+        setTimeout(function(){menuChange();})
+        showScoreBroad();
+    }
+</script>
+{% endblock %}

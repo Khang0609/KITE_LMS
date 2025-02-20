@@ -12,21 +12,22 @@
 
     <!-- MAIN -->
     <link rel="stylesheet" href="{% static 'css/main/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css\score\style.css'%}">
 
 </head>
 <body>
     <div class="header">
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-                <a href="" class="navbar-brand">
+                <a href="" class="navbar-brand" style="color: white; font-weight: bold;">
                     <img src="{% static 'img\draft.png' %}" alt="" width="30px">
                     KITE LMS
                 </a>
                 <nav class="nav">
-                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
-                    <a class="nav-link" href="#">Phòng học</a>
-                    <a class="nav-link" href="#">Học lực</a>
-                    <a class="nav-link" href="#">Tài khoản</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="trang-chu">Trang chủ</a>
+                    <a class="nav-link" href="#" id="phong-hoc">Phòng học</a>
+                    <a class="nav-link" href="{% url 'score' %}" id="hoc-luc">Học lực</a>
+                    <a class="nav-link" href="#" id="tai-khoan">Tài khoản</a>
                 </nav>
             </div>
         </nav>
