@@ -9,3 +9,11 @@
     border: 1px black solid;
     margin: 25px 75px 0 75px;
 }
+
+nav.pagination{
+    margin-top: 75px;
+}
+/* 
+nav.pagination a.page-link{
+    border-radius: 0 !important;
+} */

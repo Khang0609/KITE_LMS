@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %} Biểu đồ {% endblock %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="bieu-do-container" id="bieu-do">
+        <h1>Biểu đồ</h1>
+
+        <canvas id="myChart" style="height: 450px;max-width:900px"></canvas>
+
+
+    </div>
+
+    <nav class="pagination justify-content-end">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="{% url 'hanh-kiem' %}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="{% url 'score' %}">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="{% url 'hanh-kiem' %}">2</a>
+            </li>
+            <li class="page-item active">
+                <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<script src="{% static 'js/Score/script.js' %}"></script>
+<script>
+    window.onload = function(){
+        setTimeout(function(){menuChange();})
+        showScoreBroad();
+    }
+</script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+<script>
+    const Labels = ["", "Toán", "Lý", "Hóa", "Sinh", "Sử", "Địa", "Văn"];
+    const yValues = [,10,7,2,4,10,2,5];
+
+    new Chart("myChart", {
+    type: "bar",
+    data: {
+        labels: Labels,
+        datasets: [{
+        fill: false,
+        lineTension: 0,
+        backgroundColor: "rgba(0,0,255,1.0)",
+        borderColor: "rgba(0,0,255,0.1)",
+        data: yValues
+        }]
+    },
+    options: {
+        legend: {display: false},
+        scales: {
+        yAxes: [{ticks: {min: 1, max:15}}],
+        }
+    }
+    });
+</script>
+{% endblock %}
